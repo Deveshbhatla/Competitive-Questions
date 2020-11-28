@@ -25,6 +25,27 @@ Node *InsertAtBeg(Node *head, int x)
     }
     return temp;
 }
+
+Node *InsertAtEnd(Node *head, int x) //Optimised O(1) time O(n) space
+{  Node *temp=new Node(x);
+    if(head==NULL)
+    {
+        temp->next=temp;
+        return temp;
+    }
+    else
+    {   
+        temp->next=head->next;
+        head->next=temp;
+        //swapping head key and temp key
+        int t=head->key;
+        head->key=temp->key;
+        temp->key=t;
+
+        return temp; //return head for insert at begining
+    }
+    
+}
 int main()
 {
     Node * head= new Node(1);
@@ -35,6 +56,7 @@ int main()
     if(head==NULL)
     return 0;
             head=InsertAtBeg(head,8);
+            head=InsertAtEnd(head,8);
 
        Node *p=head;
         do
@@ -42,7 +64,8 @@ int main()
         cout<<p->key;
         p=p->next;
         } while (p!=head);
-    
+ 
+    //different way to display a circular LL
     // cout<<head->key;
     // for(Node *ptr=head->next;ptr!=head;ptr=ptr->next)
     // {
