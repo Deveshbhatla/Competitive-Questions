@@ -4,6 +4,7 @@ struct Node
 {
     int key;
     Node *left,*right;
+    //Another way to initialize the nodes
     //     Node(int k)
     // {
     //     key=k;
