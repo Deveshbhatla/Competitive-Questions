@@ -1,6 +1,5 @@
 #include <deque>
 #include <iostream>
-
 using namespace std;
 
 void printKMax(int arr[], int n, int k)
