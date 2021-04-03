@@ -1,3 +1,4 @@
+//Maximum number of consecutive 1's in a boolean array
 #include<bits/stdc++.h>
 using namespace std;
 int maxConsecutiveOneNaive(bool arr[],int n)//O(n2)
