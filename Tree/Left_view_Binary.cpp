@@ -11,6 +11,24 @@ struct Node
         left=right=NULL;
     }
 };
+
+//Recursive Approach
+int maxLevel=0;
+void printLeftLevelRecursive(Node * root,int level)
+{
+    if(root==NULL) return;
+
+    //In order to print only one node in each level
+    if(level>maxLevel)
+    {
+        cout<<root->key;
+        maxLevel=level;
+    }
+
+    printLeftLevelRecursive(root->left,level+1);
+    printLeftLevelRecursive(root->right,level+1);
+}
+
 void leftview(Node *root)
 {
       queue<Node*> q;
@@ -61,5 +79,5 @@ int main()
 	root->right->left=new Node(4);
 	root->right->right=new Node(5);
 	
-	leftview(root);
+	printLeftLevelRecursive(root,1);
 }
