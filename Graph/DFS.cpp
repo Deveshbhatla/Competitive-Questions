@@ -13,10 +13,10 @@ void DFSUtility(vector<int> adjacent[], int v, bool visited[])
 
     // Recur for all the vertices adjacent to this vertex
     //list<int>::iterator i;
-    
+
     //for (i = adjacent[v].begin(); i != adjacent[v].end(); ++i)
-        for(int i: adjacent[v])
-        if (!visited[i])//if(!visited[*i])
+    for (int i : adjacent[v])
+        if (!visited[i]) //if(!visited[*i])
             DFSUtility(adjacent, i, visited);
 }
 
