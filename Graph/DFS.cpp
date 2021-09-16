@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void addEdge(vector<int> graph[], int u, int v)
+void addEdge(vector<int> adjacent[], int u, int v)
 {
-    graph[u].push_back(v);
+    adjacent[u].push_back(v);
 }
 
 void DFSUtility(vector<int> adjacent[], int v, bool visited[])
