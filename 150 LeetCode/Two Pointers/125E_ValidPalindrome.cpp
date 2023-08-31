@@ -1,6 +1,7 @@
 //Input: s = "A man, a plan, a canal: Panama"
 //Output: true
 //Explanation: "amanaplanacanalpanama" is a palindrome.
+//https://leetcode.com/problems/valid-palindrome/?envType=study-plan-v2&envId=top-interview-150
 #include<bits/stdc++.h>
 using namespace std;
 

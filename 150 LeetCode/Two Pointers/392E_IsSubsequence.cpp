@@ -1,4 +1,5 @@
 //To check if S is subsequence of t
+//https://leetcode.com/problems/is-subsequence/?envType=study-plan-v2&envId=top-interview-150
 #include<bits/stdc++.h>
 using namespace std;
 
