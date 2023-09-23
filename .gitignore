@@ -1,3 +1,7 @@
 *.exe
 .vscode
+
+## All 3 for ignoring the c++ executable in mac
 *
+!*.*
+!*/
