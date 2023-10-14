@@ -1,0 +1,38 @@
+// Given an integer array nums and an integer k,
+// return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+
+// https://leetcode.com/problems/contains-duplicate-ii/
+
+#include <bits/stdc++.h>
+using namespace std;
+bool containsNearbyDuplicate(vector<int> &nums, int k)
+{
+    unordered_map<int, int> mp;
+    int n = nums.size();
+
+    for (int i = 0; i < n; i++)
+    {
+        // mp.count() will tell whatever ith index that I want, have I seen it before?
+        if (mp.count(nums[i]))
+        {
+            // if I have already seen this number, then check for condition abs(i - j) <= k
+            if (abs(i - mp[nums[i]]) <= k)
+                return true;
+        }
+        // if I have not seen this number before, insert the number with its position in the map
+        // and if the number is already present in the map, then update the position of that number
+        mp[nums[i]] = i;
+    }
+    // after the complete traversal, if we don't find a pair to satisfy the condition, return false
+    return false;
+}
+
+int main()
+{
+    vector<int>nums{1,2,3,1};
+    int n = 19;
+
+    cout << containsNearbyDuplicate(nums,n);
+
+    return 0;
+}
