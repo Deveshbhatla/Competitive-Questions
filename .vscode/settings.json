@@ -2,6 +2,12 @@
     "files.associations": {
         "functional": "cpp",
         "string": "cpp",
-        "iostream": "cpp"
-    }
+        "iostream": "cpp",
+        "unordered_set": "cpp",
+        "unordered_map": "cpp",
+        "__locale": "cpp",
+        "locale": "cpp",
+        "vector": "cpp"
+    },
+    "liveServer.settings.port": 5501
 }
