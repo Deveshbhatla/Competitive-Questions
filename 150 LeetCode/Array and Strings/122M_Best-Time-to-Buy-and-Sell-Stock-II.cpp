@@ -5,7 +5,7 @@
 
 //Find and return the maximum profit you can achieve.
 
-//https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/?envType=study-plan-v2&envId=top-interview-150
+//https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
 
 
 // Uses DP with bottom up approach with time complexity of O(n) and space complexity of O(1)

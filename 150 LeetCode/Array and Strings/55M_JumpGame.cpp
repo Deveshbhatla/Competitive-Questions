@@ -3,7 +3,7 @@
 
 // Return true if you can reach the last index, or false otherwise.
 
-// https://leetcode.com/problems/jump-game/description/?envType=study-plan-v2&envId=top-interview-150
+// https://leetcode.com/problems/jump-game/description/
 
 
 //Greedy solution 
@@ -27,6 +27,8 @@ bool canJump(vector<int> &nums)
         int currentJumpDistance = nums[i];
 
         // if the maximum reach is less than i, then return false, as we cannot jump till the end of the array
+        //it is because i is the position of the elements, if maximum reach becomes less than i, then we can only jump till 
+        //i-(something), hence, we cannot jump till i, so return false 
         if (maximumReach < i)
             return false;
 
